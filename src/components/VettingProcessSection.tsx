@@ -43,9 +43,9 @@ export default function VettingProcessSection() {
               <span className="section-tag">OUR STANDARDS</span>
               <AnimatedTitle 
                 text="HOW WE ENSURE QUALITY" 
-                className="title-xl text-white no-margin"
+                className="title-xl text-dark no-margin"
                 accentWords={['QUALITY']}
-                accentColor="var(--primary-blue-light)"
+                accentColor="var(--primary-blue)"
               />
             </div>
           </ScrollReveal>

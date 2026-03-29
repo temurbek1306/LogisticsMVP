@@ -10,8 +10,8 @@ const guarantees = [
   {
     icon: ShieldCheck,
     number: '01',
-    title: 'Thorough Driver Screening',
-    desc: 'We evaluate drivers by checking their driving record, conducting criminal background checks, performing DOT physicals, and using the FMCSA Pre-Screening Program (PSP).',
+    title: 'Client-Ready Candidates',
+    desc: 'We deliver pre-qualified candidates who meet all FMCSA standards, allowing your safety department to perform the final screening and background checks with confidence.',
     accent: '#3A56AF',
   },
   {
@@ -24,8 +24,8 @@ const guarantees = [
   {
     icon: RefreshCw,
     number: '03',
-    title: '50% Discount Guarantee',
-    desc: "If, for any reason, the driver we provide ends up not working for a month, we're happy to offer you a 50% discount for the next driver.",
+    title: 'Replacement Guarantee',
+    desc: "If a driver we provide doesn't meet your expectations or leaves within the first 30 days, we'll find a qualified replacement at no extra cost to you.",
     accent: '#1D4ED8',
   },
 ];
