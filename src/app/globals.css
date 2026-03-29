@@ -192,3 +192,52 @@ input:focus + label, textarea:focus + label {
     padding: 0 16px;
   }
 }
+
+/* ================== GLOBAL LOGO STYLES ================== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-svg {
+  flex-shrink: 0;
+  color: var(--primary-blue);
+  transition: color 0.3s ease;
+}
+.logo-divider {
+  width: 3px;
+  height: 42px;
+  background-color: var(--primary-blue);
+  transition: background-color 0.3s ease;
+}
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2px;
+}
+.logo-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--primary-blue);
+  line-height: 0.95;
+  letter-spacing: -0.3px;
+  transition: color 0.3s ease;
+}
+.logo-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #CA4F29; /* Brand orange color */
+  margin-top: 3px;
+  text-transform: lowercase;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 480px) {
+  .logo-container { gap: 8px; }
+  .logo-svg { width: 38px; height: 38px; }
+  .logo-divider { height: 34px; width: 2px; }
+  .logo-title { font-size: 18px; }
+  .logo-subtitle { font-size: 9px; margin-top: 2px; }
+}
+
