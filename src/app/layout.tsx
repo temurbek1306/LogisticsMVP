@@ -17,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <main className="main-wrapper" style={{ overflowX: 'hidden', width: '100%', position: 'relative' }}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
