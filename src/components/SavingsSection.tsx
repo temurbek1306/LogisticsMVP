@@ -2,6 +2,7 @@ import React from 'react';
 import { BadgeDollarSign, XOctagon, CalculatorIcon } from 'lucide-react';
 import './SavingsSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+import AnimatedTitle from './animations/AnimatedTitle';
 
 export default function SavingsSection() {
   return (
@@ -15,9 +16,10 @@ export default function SavingsSection() {
               <div className="icon-circle mb-4">
                 <BadgeDollarSign size={24} color="#3A56AF" />
               </div>
-              <h2 className="title-large text-white">
-                SAVE THOUSANDS<br/>ON RECRUITMENT<br/>EXPENSES.
-              </h2>
+              <AnimatedTitle
+                text="SAVE THOUSANDS<br/>ON RECRUITMENT<br/>EXPENSES."
+                className="title-large text-white"
+              />
               <p className="text-white opacity-90 mt-4" style={{ maxWidth: '400px' }}>
                 Our clients save an average of $500 per hired driver, or $20,000 annually, based on the hiring costs of a typical 10-100 truck fleet's annual recruiting expenses.
               </p>
@@ -66,12 +68,12 @@ export default function SavingsSection() {
         {/* Personalized Pricing Banner */}
         <ScrollReveal direction="up" delay={0.6} width="100%">
           <div className="pricing-banner dark-bg">
-            <h2 className="title-large no-margin text-white">
-              WE OFFER <span style={{ color: '#8CA4F1' }}>PERSONALIZED PRICING</span><br/>
-              BASED ON COMPANY SIZE AND NEEDS,<br/>
-              RATHER THAN A ONE-SIZE-FITS-ALL<br/>
-              APPROACH.
-            </h2>
+            <AnimatedTitle
+              text="WE OFFER PERSONALIZED PRICING<br/>BASED ON COMPANY SIZE AND NEEDS,<br/>RATHER THAN A ONE-SIZE-FITS-ALL<br/>APPROACH."
+              className="title-large no-margin text-white"
+              accentWords={['PERSONALIZED', 'PRICING']}
+              accentColor="#8CA4F1"
+            />
             <div className="icon-circle white">
               <CalculatorIcon size={24} color="#1A1A1A" />
             </div>

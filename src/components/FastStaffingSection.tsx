@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronsRight } from 'lucide-react';
 import './FastStaffing.css';
 import ScrollReveal from './animations/ScrollReveal';
+import AnimatedTitle from './animations/AnimatedTitle';
 
 export default function FastStaffingSection() {
   return (
@@ -9,10 +10,13 @@ export default function FastStaffingSection() {
       <div className="container">
         
         <ScrollReveal direction="left" delay={0.1}>
-          <div className="staffing-header mb-4">
-            <h2 className="title-large no-margin text-dark">
-              STAFF YOUR<br/>FLEET <span className="text-blue">FASTER.</span>
-            </h2>
+            <div className="staffing-header mb-4">
+            <AnimatedTitle
+              text="STAFF YOUR<br/>FLEET FASTER."
+              className="title-large no-margin text-dark"
+              accentWords={['FASTER']}
+              accentClass="text-blue"
+            />
             <div className="arrow-circle">
               <ChevronsRight size={32} color="#fff" />
             </div>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ArrowRight, DollarSign } from 'lucide-react';
 import './CalculatorSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+import AnimatedTitle from './animations/AnimatedTitle';
 
 export default function CalculatorSection() {
   const [units, setUnits] = useState('');
@@ -25,9 +26,10 @@ export default function CalculatorSection() {
             <div className="calc-graphic-container">
               <div>
                 <p className="calc-eyebrow">Savings Calculator</p>
-                <h2 className="title-large text-dark m-0" style={{ lineHeight: 1.05 }}>
-                  CALCULATE<br/>YOUR SAVINGS
-                </h2>
+                <AnimatedTitle 
+                  text="CALCULATE<br/>YOUR SAVINGS" 
+                  className="title-large text-dark m-0" 
+                />
               </div>
               <div className="phone-mockup shadow-lg">
                 <div className="phone-header">

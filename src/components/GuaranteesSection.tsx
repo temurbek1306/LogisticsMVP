@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, CreditCard, RefreshCw } from 'lucide-react';
 import './GuaranteesSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+import AnimatedTitle from './animations/AnimatedTitle';
 
 const guarantees = [
   {
@@ -37,10 +38,7 @@ export default function GuaranteesSection() {
           <div className="guar-header">
             <div>
               <p className="guar-eyebrow">WHY CHOOSE US</p>
-              <h2 className="title-large text-white m-0">
-                WE GUARANTEE<br/>
-                <span className="text-blue">RESULTS.</span>
-              </h2>
+              <AnimatedTitle text="WE GUARANTEE<br/>RESULTS." className="title-large text-white m-0" />
             </div>
             <div className="guar-badge">
               <ShieldCheck size={28} color="#fff" strokeWidth={1.5} />

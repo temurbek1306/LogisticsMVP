@@ -4,6 +4,7 @@ import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './ReviewsSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+import AnimatedTitle from './animations/AnimatedTitle';
 
 const reviews = [
   {
@@ -35,10 +36,12 @@ export default function ReviewsSection() {
           <div className="reviews-header">
             <div>
               <p className="reviews-eyebrow">CLIENT TESTIMONIALS</p>
-              <h2 className="title-large text-white m-0">
-                WHAT OUR <span className="text-reviews-accent">CLIENTS</span><br/>
-                SAY ABOUT <span className="text-reviews-accent">US</span>
-              </h2>
+              <AnimatedTitle
+                text="WHAT OUR CLIENTS<br/>SAY ABOUT US"
+                className="title-large text-white m-0"
+                accentWords={['CLIENTS', 'US']}
+                accentClass="text-reviews-accent"
+              />
             </div>
             <div className="reviews-stars-group">
               {[...Array(5)].map((_, i) => (

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './QuoteSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+import AnimatedTitle from './animations/AnimatedTitle';
 import DrivingTruck from './animations/DrivingTruck';
 
 export default function QuoteSection() {
@@ -47,7 +48,7 @@ export default function QuoteSection() {
             {/* Left Panel */}
             <div className="quote-left">
               <div className="quote-content">
-                <h2 className="title-large">GET A QUOTE<br/>FOR FREE</h2>
+                <AnimatedTitle text="GET A QUOTE<br/>FOR FREE" className="title-large" />
                 <p className="mt-4 opacity-80" style={{ maxWidth: '300px' }}>
                   Getting a consultation from us won't cost you a dime.<br/><br/>
                   Fill the form on the right and we'll contact you!

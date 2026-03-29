@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import './TrustedBySection.css';
+import AnimatedTitle from './animations/AnimatedTitle';
 
 const partners = [
   { name: 'DTM Trucking Inc', src: '/images/partners/1.png' },
@@ -27,7 +28,7 @@ export default function TrustedBySection() {
   return (
     <section className="trusted-section section">
       <div className="container overflow-hidden">
-        <h2 className="trusted-title text-center">TRUSTED BY</h2>
+        <AnimatedTitle text="TRUSTED BY" className="trusted-title text-center" />
         
         <div className="carousel-wrapper">
           <div className="carousel-track">

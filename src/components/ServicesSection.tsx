@@ -2,6 +2,7 @@ import React from 'react';
 import { Search, Truck, User, Users } from 'lucide-react';
 import './ServicesSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+import AnimatedTitle from './animations/AnimatedTitle';
 
 export default function ServicesSection() {
   return (
@@ -9,7 +10,7 @@ export default function ServicesSection() {
       <div className="container">
         <ScrollReveal direction="left" delay={0.1}>
           <div className="services-header">
-            <h2 className="title-large no-margin">WE CAN HELP YOU FIND:</h2>
+            <AnimatedTitle text="WE CAN HELP YOU FIND:" className="title-large no-margin" />
             <div className="search-icon-bg">
               <Search size={24} color="#CBD5E1" />
             </div>
