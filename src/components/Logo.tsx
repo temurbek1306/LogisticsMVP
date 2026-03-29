@@ -1,10 +1,11 @@
 import React from 'react';
+import './Logo.css';
 
 export default function Logo() {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+    <div className="logo-container">
       {/* SVG Geometric logo approximation */}
-      <svg width="48" height="48" viewBox="0 0 100 100" fill="none" stroke="#001859" strokeWidth="2.5" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+      <svg className="logo-svg" width="48" height="48" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round">
         {/* Outer hexagon */}
         <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" />
         {/* Inner lines forming the 3D-like structure */}
@@ -27,29 +28,14 @@ export default function Logo() {
       </svg>
       
       {/* Vertical divider */}
-      <div style={{ width: '3px', height: '42px', backgroundColor: '#001859' }}></div>
+      <div className="logo-divider"></div>
       
       {/* Text Group */}
-      <div style={{ display: 'flex', flexDirection: 'column', paddingLeft: '2px' }}>
-        <span style={{ 
-          fontFamily: "'Inter', sans-serif", 
-          fontSize: '22px', 
-          fontWeight: 900, 
-          color: '#001859', 
-          lineHeight: '0.95',
-          letterSpacing: '-0.3px'
-        }}>
+      <div className="logo-text-group">
+        <span className="logo-title">
           FUTURE<br/>SOLUTION
         </span>
-        <span style={{ 
-          fontFamily: "'Inter', sans-serif", 
-          fontSize: '11px', 
-          fontWeight: 500, 
-          color: '#CA4F29', 
-          marginTop: '3px',
-          textTransform: 'lowercase',
-          letterSpacing: '0.2px'
-        }}>
+        <span className="logo-subtitle">
           we work you decide
         </span>
       </div>

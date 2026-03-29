@@ -104,9 +104,8 @@
 /* Hamburger */
 .mobile-menu-btn {
   display: none;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
+  background: transparent;
+  border: none;
   cursor: pointer;
   padding: 8px;
   align-items: center;
@@ -116,13 +115,12 @@
 }
 
 .header.scrolled .mobile-menu-btn {
-  background: rgba(58, 86, 175, 0.08);
-  border-color: rgba(58, 86, 175, 0.2);
   color: var(--text-dark);
 }
 
 .mobile-menu-btn:hover {
-  background: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 @media (max-width: 992px) {
@@ -133,16 +131,24 @@
     display: flex;
   }
   .header {
-    background: rgba(10, 25, 80, 0.85);
+    background: rgba(10, 25, 80, 0.85); /* Dark navy */
     backdrop-filter: blur(16px);
     padding: 14px 0;
   }
   .header.scrolled {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.95);
   }
-  .header.scrolled .mobile-menu-btn {
-    color: var(--text-dark);
-  }
+  /* Invert logo and menu button when header is dark (not scrolled) */
+  .header:not(.scrolled) .logo-svg { color: #fff; }
+  .header:not(.scrolled) .logo-divider { background-color: #fff; }
+  .header:not(.scrolled) .logo-title { color: #fff; }
+  .header:not(.scrolled) .mobile-menu-btn { color: #fff; }
+  
+  /* Reset to dark blue when scrolled (white bg) */
+  .header.scrolled .logo-svg { color: var(--primary-blue); }
+  .header.scrolled .logo-divider { background-color: var(--primary-blue); }
+  .header.scrolled .logo-title { color: var(--primary-blue); }
+  .header.scrolled .mobile-menu-btn { color: var(--text-dark); }
 }
 
 /* ============================================
@@ -184,11 +190,14 @@
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.mobile-sidebar .logo-text {
+.mobile-sidebar .logo-svg {
   color: #ffffff !important;
 }
-.mobile-sidebar svg path[fill="#001859"] {
-  fill: #ffffff !important;
+.mobile-sidebar .logo-divider {
+  background-color: #ffffff !important;
+}
+.mobile-sidebar .logo-title {
+  color: #ffffff !important;
 }
 
 .close-btn {
