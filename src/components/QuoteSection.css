@@ -66,9 +66,9 @@
     padding: 40px;
   }
   .quote-truck-img {
-    width: 60%;
-    margin: 40px auto 0;
-    transform: rotate(0deg);
+    width: 90%;
+    margin: 30px auto -10px auto; /* Reset margins and center */
+    display: block;
   }
 }
 

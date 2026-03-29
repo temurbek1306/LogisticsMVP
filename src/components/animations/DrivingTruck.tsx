@@ -10,7 +10,7 @@ export default function DrivingTruck() {
       <div style={{ perspective: "1500px", width: "100%" }}>
         <motion.div
           initial={{ 
-            x: -500, 
+            x: -200, 
             rotateY: 20, 
             scale: 0.9, 
             opacity: 0
