@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Briefcase, UserSearch } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 import Logo from './Logo';
 import './Header.css';
 
@@ -10,6 +11,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [driversDropdownOpen, setDriversDropdownOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +33,7 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className={`header ${scrolled ? 'scrolled glass-morphism' : ''}`}>
+    <header className={`header ${scrolled || !isHome ? 'scrolled glass-morphism' : ''}`}>
       <div className="container header-container">
         <Link href="/" className="logo">
           <Logo />

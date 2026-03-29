@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import HeroDriverSection from './components/HeroDriverSection';
 import QuickAccessSection from './components/QuickAccessSection';
 import JobTypesSection from './components/JobTypesSection';
@@ -21,7 +19,6 @@ export const metadata = {
 export default function WorkWithUsPage() {
   return (
     <main className="main-wrapper" style={{ overflowX: 'hidden' }}>
-      <Header />
       <HeroDriverSection />
       <QuickAccessSection />
       <JobTypesSection />
@@ -33,7 +30,6 @@ export default function WorkWithUsPage() {
       <DriverReviewsSection />
       <AmenitiesAndSafetySection />
       <DriverApplicationForm />
-      <Footer />
     </main>
   );
 }

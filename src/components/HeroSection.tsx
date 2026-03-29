@@ -30,21 +30,7 @@ export default function HeroSection() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="up" delay={0.5} width="fit-content" className="ml-auto">
-          <div className="hero-badge">
-          <div className="badge-header">
-            <UserCircle size={48} className="text-blue" style={{ strokeWidth: 1.5 }} />
-            <div className="badge-title-block">
-              <strong className="badge-name">Ethan Smith</strong>
-              <span className="badge-status">Driving experience:</span>
-            </div>
-          </div>
-          <div className="badge-body">
-            <p className="badge-years">10 years</p>
-            <p className="badge-desc">Looking for dry van jobs</p>
-          </div>
-        </div>
-        </ScrollReveal>
+
       </div>
     </section>
   );

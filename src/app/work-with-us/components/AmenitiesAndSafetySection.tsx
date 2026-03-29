@@ -9,30 +9,27 @@ export default function AmenitiesAndSafetySection() {
         
         {/* Amenities Card */}
         <ScrollReveal direction="up" delay={0.1}>
-          <div className="amenities-card bg-dark text-white p-12 rounded-3xl mb-12">
+          <div className="amenities-card">
             <AnimatedTitle 
               text="MODERN TRUCKS WITH AMENITIES."
-              className="title-large"
+              className="title-large text-white"
             />
-            <p className="mt-4 opacity-80 max-w-2xl">
+            <p className="mt-4 text-white opacity-80 max-w-2xl">
               Our partner companies offer top-of-the-line trucks with automatic transmissions, manufactured between 2020 and 2023, that are fully equipped with everything you need for comfortable work and rest on the road.
             </p>
-          </div>
-        </ScrollReveal>
 
-        {/* Interior Image */}
-        <ScrollReveal direction="up" delay={0.2}>
-          <div className="interior-img-wrapper rounded-3xl overflow-hidden mb-12">
-            <img 
-              src="https://images.unsplash.com/photo-1591768793355-74d7c8691f1a?auto=format&fit=crop&q=80&w=1200" 
-              alt="Truck interior amenities" 
-              className="interior-img"
-            />
+            <div className="interior-img-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?auto=format&fit=crop&q=80&w=1200" 
+                alt="Truck interior amenities" 
+                className="interior-img"
+              />
+            </div>
           </div>
         </ScrollReveal>
 
         {/* Safety Section */}
-        <div className="safety-grid">
+        <div className="safety-grid mt-20">
           <div className="safety-content">
             <AnimatedTitle 
               text="SAFETY RATING SCREENING."
@@ -46,19 +43,36 @@ export default function AmenitiesAndSafetySection() {
           </div>
           
           <ScrollReveal direction="left" delay={0.4}>
-            <div className="safety-card-mockup bg-dark rounded-2xl p-8 relative overflow-hidden">
-               <div className="mockup-header flex justify-between items-center mb-6">
+            <div className="vetting-dashboard relative">
+               <div className="flex justify-between items-center mb-10 pb-6 border-b border-gray-100">
                   <div className="flex gap-4 items-center">
-                    <div className="w-10 h-10 bg-gray-700 rounded-lg"></div>
+                    <div className="w-14 h-14 bg-blue-50 flex-center rounded-2xl text-blue font-bold shadow-sm">PE</div>
                     <div>
-                      <h4 className="text-white font-bold text-sm">Pegasus Express, Inc.</h4>
-                      <div className="flex gap-1 text-yellow-500 text-xs">★★★★★ <span className="text-gray-400">(57)</span></div>
+                      <h4 className="text-dark font-bold text-lg leading-tight">Pegasus Express, Inc.</h4>
+                      <p className="text-[11px] uppercase tracking-widest text-gray-400 font-bold mt-1">USDOT 3123849</p>
                     </div>
                   </div>
-                  <span className="text-green-500 text-xs font-bold">Open</span>
+                  <span className="status-failed report-status">Rejected</span>
                </div>
-               <p className="text-gray-400 text-xs mb-4">Transportation service in Lemont, Illinois</p>
-               <div className="rejected-stamp">REJECTED</div>
+               
+               <div className="space-y-4">
+                 <div className="report-item">
+                    <span className="report-label">Safety Rating</span>
+                    <span className="status-failed report-status">Unsatisfactory</span>
+                 </div>
+                 <div className="report-item">
+                    <span className="report-label">Vehicle Maintenance</span>
+                    <span className="status-failed report-status">Alert</span>
+                 </div>
+                 <div className="report-item">
+                    <span className="report-label">Driver Fitness</span>
+                    <span className="status-passed report-status">Satisfactory</span>
+                 </div>
+                 <div className="report-item">
+                    <span className="report-label">Successful Inspections</span>
+                    <span className="font-bold text-dark">42%</span>
+                 </div>
+               </div>
             </div>
           </ScrollReveal>
         </div>

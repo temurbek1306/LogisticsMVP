@@ -33,9 +33,9 @@ export default function DriverReviewsSection() {
       <div className="container">
         <div className="reviews-header text-white mb-12">
           <AnimatedTitle 
-            text="CHECK OUT WHAT OUR<br />AWESOME DRIVERS HAVE TO<br />SAY ABOUT OUR SERVICE"
+            text="CHECK OUT WHAT OUR AWESOME DRIVERS HAVE TO SAY ABOUT OUR SERVICE"
             className="title-large"
-            accentWords={['SERVICE']}
+            accentWords={['SERVICE', 'AWESOME']}
             accentColor="#8CA4F1"
           />
           <ScrollReveal direction="left" delay={0.2}>

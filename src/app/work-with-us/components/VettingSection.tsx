@@ -5,10 +5,10 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 
 export default function VettingSection() {
   return (
-    <section className="wwu-vetting-section">
-      <div className="container wwu-split-grid">
+    <section className="wwu-vetting-section bg-primary-blue py-24">
+      <div className="container hometime-grid">
         
-        <div className="wwu-split-content">
+        <div className="vetting-content">
           <ScrollReveal direction="up" delay={0.1}>
             <div className="icon-circle white mb-8">
               <ShieldCheck size={24} color="#1A1A1A" />
@@ -16,7 +16,7 @@ export default function VettingSection() {
           </ScrollReveal>
           
           <AnimatedTitle 
-            text="RIGOROUS<br/>EMPLOYER VETTING."
+            text="RIGOROUS EMPLOYER VETTING."
             className="title-large text-white"
           />
           
@@ -27,16 +27,15 @@ export default function VettingSection() {
           </ScrollReveal>
         </div>
 
-        <div className="wwu-split-visual">
+        <div className="vetting-visual">
           <ScrollReveal direction="left" delay={0.3}>
-            <div className="magnifying-art-wrapper">
+            <div className="hometime-img-wrapper">
               <img 
-                src="https://images.unsplash.com/photo-1588626607212-9bd5385611f7?auto=format&fit=crop&q=80&w=800" 
+                src="https://images.unsplash.com/photo-1591768793355-74d7c8691f1a?auto=format&fit=crop&q=80&w=1000" 
                 alt="Truck inside magnifying glass" 
-                className="vetting-img" 
+                className="hometime-img" 
               />
-              {/* Optional glowing effect for premium look */}
-              <div className="vetting-glow"></div>
+              <div className="rejected-stamp">REJECTED</div>
             </div>
           </ScrollReveal>
         </div>

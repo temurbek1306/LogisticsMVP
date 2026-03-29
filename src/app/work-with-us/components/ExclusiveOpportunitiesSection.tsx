@@ -34,15 +34,20 @@ export default function ExclusiveOpportunitiesSection() {
           
           {/* Card 1 */}
           <ScrollReveal direction="up" delay={0.2} width="100%">
-            <div className="exclusive-card bg-card-blue">
-              <div className="exclusive-card-img-placeholder bg-white">
-                <div className="mock-circle-progress">
-                  <span className="mock-percent">99%</span>
+            <div className="exclusive-card">
+              <div className="phone-mockup">
+                <div className="phone-screen">
+                  <div className="mock-status-bar">
+                    <span className="mock-time">9:41</span>
+                  </div>
+                  <div className="mock-circle-progress">
+                    <span className="mock-percent">99%</span>
+                  </div>
+                  <p className="mock-label text-blue">Waiting for approval</p>
                 </div>
-                <p className="mock-label">waiting for approval</p>
               </div>
               <div className="exclusive-card-content">
-                <h3 className="title-medium text-white mb-2">24-Hour<br/>Pre-Approval</h3>
+                <h3 className="title-medium text-white mb-2">24-Hour Pre-Approval</h3>
                 <p className="text-white opacity-80 text-sm">
                   Our team processes driver applications promptly and ensures pre-approval within 24 hours. You can submit applications conveniently around the clock through our website.
                 </p>
@@ -52,13 +57,21 @@ export default function ExclusiveOpportunitiesSection() {
 
           {/* Card 2 */}
           <ScrollReveal direction="up" delay={0.4} width="100%">
-            <div className="exclusive-card bg-card-blue">
-              <div className="exclusive-card-img-placeholder bg-gradient-orange">
-                <h2 className="mock-time">9:41</h2>
-                <p className="mock-day">Wednesday, August 12</p>
+            <div className="exclusive-card">
+              <div className="phone-mockup">
+                <div className="phone-screen">
+                  <div className="mock-status-bar">
+                    <span className="mock-time">9:41</span>
+                  </div>
+                  <div className="mock-success-content">
+                    <div className="mock-check-icon">✓</div>
+                    <h2 className="mock-val">87%</h2>
+                    <p className="mock-day">Hire Success Rate</p>
+                  </div>
+                </div>
               </div>
               <div className="exclusive-card-content">
-                <h3 className="title-medium text-white mb-2">High<br/>Success Rate</h3>
+                <h3 className="title-medium text-white mb-2">High Success Rate</h3>
                 <p className="text-white opacity-80 text-sm">
                   Over 87% of drivers placed through our agency successfully complete the hiring process and start working, demonstrating the high effectiveness of our services.
                 </p>

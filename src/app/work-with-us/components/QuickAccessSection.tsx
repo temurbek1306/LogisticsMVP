@@ -19,7 +19,7 @@ export default function QuickAccessSection() {
             />
             <ScrollReveal direction="up" delay={0.2}>
               <p className="qa-desc mt-4">
-                Future Solution Logistic offers immediate access<br/>to the latest job opportunities.
+                Future Solution Logistic offers immediate access to the latest job opportunities.
               </p>
             </ScrollReveal>
           </div>
@@ -46,7 +46,7 @@ export default function QuickAccessSection() {
         <div className="container mt-12">
           <div className="qa-truck-array">
             <img 
-              src="https://images.unsplash.com/photo-1601584488358-13d80a373b40?auto=format&fit=crop&q=80&w=1200" 
+              src="https://images.unsplash.com/photo-1542362567-b0550029315e?auto=format&fit=crop&q=80&w=1400" 
               alt="Fleet of modern semi-trucks parked in a row" 
               className="qa-trucks-img"
             />

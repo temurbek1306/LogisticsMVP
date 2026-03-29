@@ -23,23 +23,23 @@ export default function RecruiterBenefitsSection() {
   ];
 
   return (
-    <section className="wwu-recruiter-section bg-dark">
+    <section className="wwu-benefits-section">
       <div className="container">
         
-        <div className="text-center mb-16 max-w-4xl mx-auto">
+        <div className="text-center mb-16 max-w-5xl mx-auto">
           <AnimatedTitle 
-            text="YOU'LL BE ASSIGNED A PERSONAL RECRUITER<br/>WHO WILL ASSIST IN FINDING JOBS THAT<br/>MATCH YOUR REQUIREMENTS."
-            className="title-large text-white text-center"
-            accentWords={['PERSONAL', 'RECRUITER', 'ASSIST', 'YOUR', 'REQUIREMENTS.']}
+            text="YOU'LL BE ASSIGNED A PERSONAL RECRUITER WHO WILL ASSIST IN FINDING JOBS THAT MATCH YOUR REQUIREMENTS."
+            className="title-large text-center"
+            accentWords={['PERSONAL', 'RECRUITER']}
             accentColor="var(--primary-blue)"
           />
         </div>
 
-        <div className="recruiter-cards-grid">
+        <div className="benefits-grid">
           {benefits.map((card, idx) => (
             <ScrollReveal key={idx} direction="up" delay={0.2 * (idx + 1)} width="100%">
               <div className="benefit-card">
-                <div className="benefit-icon-wrapper mb-8">
+                <div className="benefit-icon">
                   {card.icon}
                 </div>
                 <h3 className="title-medium text-dark mb-4 whitespace-pre-line">

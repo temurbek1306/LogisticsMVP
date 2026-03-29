@@ -15,13 +15,13 @@ export default function TransparencySection() {
         <div className="transparency-grid">
           {/* Transparent Payment Card */}
           <ScrollReveal direction="up" delay={0.1}>
-            <div className="transparency-card glass-morphism">
-              <h3 className="title-medium text-dark mb-4">TRANSPARENT<br />PAYMENT</h3>
+            <div className="transparency-card">
+              <h3 className="title-medium text-dark mb-4 uppercase">Transparent Payment</h3>
               <p className="text-dark opacity-70 mb-6 text-sm">
                 Upon request, we provide company statements with detailed information about the salary structure, ensuring complete transparency in payments.
               </p>
               
-              <div className="payment-table">
+              <div className="payment-table shadow-sm">
                 <div className="table-header">
                   <span>Route</span>
                   <span>Total Miles</span>
@@ -44,10 +44,10 @@ export default function TransparencySection() {
 
           {/* Proven Track Record Card */}
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="transparency-card glass-morphism">
-              <h3 className="title-medium text-dark mb-4">PROVEN TRACK<br />RECORD</h3>
+            <div className="transparency-card">
+              <h3 className="title-medium text-dark mb-4 uppercase">Proven Track Record</h3>
               <p className="text-dark opacity-70 mb-6 text-sm">
-                We've successfully helped over 727 drivers secure employment. Don't just take our word for it; explore the <span className="text-blue">reviews</span> from satisfied drivers who have benefited from our services.
+                We've successfully helped over 727 drivers secure employment. Don't just take our word for it; explore the <span className="text-blue font-bold cursor-pointer">reviews</span> from satisfied drivers.
               </p>
               
               <div className="stats-badges">
@@ -55,13 +55,13 @@ export default function TransparencySection() {
                   <div className="stars">★★★★★</div>
                   <span className="stat-label">Great!</span>
                 </div>
-                <div className="stat-badge">
+                <div className="stat-badge alt">
                   <div className="stars">★★★★★</div>
                   <span className="stat-label">found a job quickly</span>
                 </div>
-                <div className="stat-badge alt">
+                <div className="stat-badge">
                   <div className="stars">★★★★★</div>
-                  <span className="stat-label">convenient work schedule</span>
+                  <span className="stat-label">convenient schedule</span>
                 </div>
               </div>
             </div>

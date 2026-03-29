@@ -6,10 +6,10 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 export default function JobTypesSection() {
   const jobTypes = ['OTR', 'Regional / Local', 'SAP-Friendly'];
   const trailers = [
-    { name: 'Flatbed', img: 'https://images.unsplash.com/photo-1586864387789-0630b7f6c321?auto=format&fit=crop&q=80&w=400' },
-    { name: 'Reefer', img: 'https://images.unsplash.com/photo-1621360091873-1991d0d931ea?auto=format&fit=crop&q=80&w=400' },
-    { name: 'Tanker', img: 'https://images.unsplash.com/photo-1591768487224-b1eb2ce61e49?auto=format&fit=crop&q=80&w=400' },
-    { name: 'Auto Hauler', img: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=400' }
+    { name: 'Flatbed', img: 'https://images.unsplash.com/photo-1621360091873-1991d0d931ea?q=80&w=600' },
+    { name: 'Reefer', img: 'https://images.unsplash.com/photo-1586191582056-174898863f82?q=80&w=600' },
+    { name: 'Tanker', img: 'https://images.unsplash.com/photo-1591764868154-1eb31e145f59?q=80&w=600' },
+    { name: 'Auto Hauler', img: 'https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=600' }
   ];
 
   return (
