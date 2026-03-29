@@ -1,0 +1,91 @@
+.trusted-section {
+  background-color: #f7f9fc;
+  padding: 60px 0 80px 0;
+  border-top: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
+  overflow: hidden;
+}
+
+.trusted-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Full screen width carousel wrapper */
+.carousel-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 20px 0;
+  /* Adds fade effect to the edges */
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  /* 40 seconds duration for a smooth slow scroll */
+  animation: scrollCarousel 40s linear infinite;
+  padding: 0;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.trusted-card {
+  background-color: var(--text-white);
+  border-radius: 12px;
+  width: 250px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.trusted-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.trusted-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  /* Since we duplicated the list and added a 30px gap, we translate entirely left by Half the content */
+  100% { transform: translateX(calc(-50% - 15px)); }
+}
+
+@media (max-width: 768px) {
+  .trusted-card {
+    width: 180px;
+    height: 110px;
+    padding: 16px;
+  }
+  .carousel-wrapper {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}

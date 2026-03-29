@@ -1,0 +1,120 @@
+.stats-banner {
+  background-color: var(--primary-blue);
+  border-radius: 16px;
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  color: var(--text-white);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(58, 86, 175, 0.2);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.stats-banner.animate-slide-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-out;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+}
+
+.stat-number {
+  font-family: 'Teko', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  position: relative;
+}
+
+.stat-icon {
+  margin-bottom: 12px;
+  color: #A3B5F1;
+}
+
+.plus-sign {
+  font-size: 3rem;
+  margin-bottom: 8px;
+  color: #A3B5F1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.road-graphic {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background: var(--dark-bg);
+  /* clip-path to make it look like a curved road */
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.floating-truck {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 150px;
+  transform: rotate(-15deg);
+  filter: drop-shadow(0 10px 10px rgba(0,0,0,0.5));
+  animation: floatTruck 3s ease-in-out infinite;
+}
+
+@keyframes floatTruck {
+  0% { transform: translateY(0) rotate(-15deg); }
+  50% { transform: translateY(-10px) rotate(-15deg); }
+  100% { transform: translateY(0) rotate(-15deg); }
+}
+
+@media (max-width: 1024px) {
+  .stats-banner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 32px;
+    text-align: center;
+  }
+  .stat-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .stat-number {
+    font-size: 4rem;
+    justify-content: center;
+  }
+  .stat-label {
+    font-size: 1rem;
+  }
+  .road-graphic, .stat-divider {
+    display: none;
+  }
+}

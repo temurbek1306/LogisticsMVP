@@ -1,0 +1,112 @@
+.services-section {
+  background-color: var(--text-white);
+}
+
+.services-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.search-icon-bg {
+  background: #F1F5F9;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  border-radius: 16px;
+  padding: 40px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+}
+
+.service-icon, .service-icon-group {
+  margin-bottom: 40px;
+}
+
+.service-icon-group {
+  display: flex;
+  gap: 12px;
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.service-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+/* Card Themes */
+.service-card.dark {
+  background-color: var(--dark-bg-card);
+  color: var(--text-white);
+}
+
+.service-card.dark .service-icon {
+  border-color: rgba(255,255,255,0.2);
+}
+
+.service-card.blue {
+  background-color: var(--primary-blue);
+  color: var(--text-white);
+  box-shadow: 0 10px 30px rgba(58, 86, 175, 0.3);
+}
+
+.service-card.blue .service-icon {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.service-card.light {
+  background-color: #F8F9FA;
+  color: var(--text-dark);
+}
+
+.service-card.light .service-icon {
+  border-color: #E2E8F0;
+  color: var(--text-gray);
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

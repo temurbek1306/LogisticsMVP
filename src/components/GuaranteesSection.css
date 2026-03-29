@@ -1,0 +1,61 @@
+.guarantees-section {
+  background-color: var(--dark-bg);
+  padding: 120px 0;
+}
+
+.guar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.check-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.guar-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.02);
+  transition: all 0.3s;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.guar-card:hover { border-color: rgba(255, 255, 255, 0.2); background-color: rgba(255, 255, 255, 0.05); }
+
+.guar-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .guar-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .guarantees-section {
+    padding: 80px 0;
+  }
+  .guar-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+}
