@@ -6,7 +6,7 @@ import ScrollReveal from './animations/ScrollReveal';
 
 export default function StatsBanner() {
   return (
-    <div className="container" style={{ paddingBottom: '80px' }}>
+    <div className="container" style={{ paddingBottom: '24px' }}>
       <ScrollReveal direction="up" delay={0.2}>
         <div className="stats-banner">
           <div className="stat-item">

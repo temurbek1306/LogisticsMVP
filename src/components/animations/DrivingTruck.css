@@ -1,0 +1,97 @@
+.driving-truck-container {
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+.truck-assembly {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.truck-body-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Base image styling */
+.truck-body-wrapper .quote-truck-img {
+  width: 100%;
+  display: block;
+  mix-blend-mode: multiply;
+  filter: brightness(1.4) contrast(1.2); /* Effectively removes gray background on white surface */
+  position: relative;
+  z-index: 1;
+}
+
+/* CSS Wheels */
+.css-wheel {
+  position: absolute;
+  width: 72px; /* Slightly smaller for better rim fit */
+  height: 72px;
+  background: #000;
+  border-radius: 50%;
+  border: 4px solid #111;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.wheel-inner {
+  width: 65%;
+  height: 65%;
+  background: radial-gradient(circle at center, #fff 0%, #888 40%, #222 100%);
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #444;
+  box-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+.spoke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255,255,255,0.25);
+  transform-origin: left center;
+}
+
+/* 100% PIXEL PERFECT COORDINATES */
+.wheel-front {
+  bottom: 31.0%; /* Corrected: front rim center is slightly lower in perspective */
+  left: 71.7%; 
+  transform: translate(-50%, 50%);
+}
+
+.wheel-rear-1 {
+  bottom: 32.7%; /* Corrected: tandem axle rim center */
+  left: 31.0%; 
+  transform: translate(-50%, 50%);
+}
+
+.wheel-rear-2 {
+  bottom: 32.7%; /* Corrected: tandem axle rim center */
+  left: 22.0%; 
+  transform: translate(-50%, 50%);
+}
+
+.truck-shadow {
+  position: absolute;
+  bottom: -15px;
+  left: 5%;
+  right: 5%;
+  height: 30px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(8px);
+  z-index: -1;
+}
+
+@media (max-width: 992px) {
+  .css-wheel {
+    width: 50px;
+    height: 50px;
+  }
+}

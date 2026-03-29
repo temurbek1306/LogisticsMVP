@@ -17,6 +17,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  perspective: 1200px;
+  overflow: visible;
 }
 
 .quote-truck-img {
@@ -24,7 +26,7 @@
   margin-top: auto;
   margin-left: -50px;
   margin-bottom: -40px;
-  transform: rotate(-5deg);
+  pointer-events: none;
 }
 
 .quote-right {

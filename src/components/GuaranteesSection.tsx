@@ -1,7 +1,33 @@
+'use client';
 import React from 'react';
-import { Search, CreditCard, Percent, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ShieldCheck, CreditCard, RefreshCw } from 'lucide-react';
 import './GuaranteesSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+
+const guarantees = [
+  {
+    icon: ShieldCheck,
+    number: '01',
+    title: 'Thorough Driver Screening',
+    desc: 'We evaluate drivers by checking their driving record, conducting criminal background checks, performing DOT physicals, and using the FMCSA Pre-Screening Program (PSP).',
+    accent: '#3A56AF',
+  },
+  {
+    icon: CreditCard,
+    number: '02',
+    title: 'Pay Only After Results',
+    desc: "You won't be required to make any payments until the driver starts delivering loads. This ensures that you're only paying for services that have already been rendered.",
+    accent: '#2563EB',
+  },
+  {
+    icon: RefreshCw,
+    number: '03',
+    title: '50% Discount Guarantee',
+    desc: "If, for any reason, the driver we provide ends up not working for a month, we're happy to offer you a 50% discount for the next driver.",
+    accent: '#1D4ED8',
+  },
+];
 
 export default function GuaranteesSection() {
   return (
@@ -9,43 +35,50 @@ export default function GuaranteesSection() {
       <div className="container">
         <ScrollReveal direction="left" delay={0.1}>
           <div className="guar-header">
-            <h2 className="title-large text-white m-0">
-              WE GUARANTEE<br/>
-              <span className="text-blue">RESULTS.</span>
-            </h2>
-            <div className="check-circle">
-              <CheckCircle size={24} color="#1A1A1A" />
+            <div>
+              <p className="guar-eyebrow">WHY CHOOSE US</p>
+              <h2 className="title-large text-white m-0">
+                WE GUARANTEE<br/>
+                <span className="text-blue">RESULTS.</span>
+              </h2>
+            </div>
+            <div className="guar-badge">
+              <ShieldCheck size={28} color="#fff" strokeWidth={1.5} />
+              <span>100% Risk-Free</span>
             </div>
           </div>
         </ScrollReveal>
 
         <div className="guar-grid">
-          <ScrollReveal direction="up" delay={0.2} width="100%">
-            <div className="guar-card">
-              <Search size={32} color="#fff" strokeWidth={1.5} className="mb-4" />
-              <p className="guar-desc text-white opacity-90 mt-4">
-                We evaluate drivers by checking their driving record, conducting criminal background checks, performing DOT physicals, and using the FMCSA Pre-Screening Program (PSP).
-              </p>
-            </div>
-          </ScrollReveal>
+          {guarantees.map((item, i) => (
+            <ScrollReveal key={i} direction="up" delay={0.2 + i * 0.15} width="100%">
+              <motion.div
+                className="guar-card"
+                whileHover={{ y: -6, borderColor: 'rgba(58,86,175,0.6)' }}
+                transition={{ duration: 0.25 }}
+              >
+                {/* Top row: number + icon */}
+                <div className="guar-card-top">
+                  <span className="guar-number">{item.number}</span>
+                  <div className="guar-icon-wrap" style={{ background: `${item.accent}22` }}>
+                    <item.icon size={26} color={item.accent} strokeWidth={1.8} />
+                  </div>
+                </div>
 
-          <ScrollReveal direction="up" delay={0.4} width="100%">
-            <div className="guar-card">
-              <CreditCard size={32} color="#fff" strokeWidth={1.5} className="mb-4" />
-              <p className="guar-desc text-white opacity-90 mt-4">
-                You won't be required to make any payments until the driver starts delivering loads. This ensures that you're only paying for services that have already been rendered.
-              </p>
-            </div>
-          </ScrollReveal>
+                {/* Divider */}
+                <div className="guar-divider" style={{ background: `linear-gradient(90deg, ${item.accent}, transparent)` }} />
 
-          <ScrollReveal direction="up" delay={0.6} width="100%">
-            <div className="guar-card">
-              <Percent size={32} color="#fff" strokeWidth={1.5} className="mb-4" />
-              <p className="guar-desc text-white opacity-90 mt-4">
-                If, for any reason, the driver we provide you with ends up not working for a month, we're happy to offer you a 50% discount for the next driver.
-              </p>
-            </div>
-          </ScrollReveal>
+                {/* Title */}
+                <h3 className="guar-title">{item.title}</h3>
+
+                {/* Description */}
+                <p className="guar-desc">{item.desc}</p>
+
+                {/* Bottom glow */}
+                <div className="guar-glow" style={{ background: `radial-gradient(circle at 50% 100%, ${item.accent}33, transparent 70%)` }} />
+              </motion.div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

@@ -6,7 +6,15 @@ import ScrollReveal from './animations/ScrollReveal';
 export default function HeroSection() {
   return (
     <section className="hero-section">
-      <div className="hero-bg" style={{ backgroundImage: "url('/images/hero-bg.png')" }}></div>
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        playsInline 
+        className="hero-video-bg"
+      >
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
       <div className="hero-overlay"></div>
       <div className="container hero-container">
         <ScrollReveal direction="left" delay={0.1}>

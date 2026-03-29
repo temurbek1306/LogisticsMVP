@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './QuoteSection.css';
 import ScrollReveal from './animations/ScrollReveal';
+import DrivingTruck from './animations/DrivingTruck';
 
 export default function QuoteSection() {
   const [formData, setFormData] = useState({
@@ -52,9 +53,7 @@ export default function QuoteSection() {
                   Fill the form on the right and we'll contact you!
                 </p>
               </div>
-              <ScrollReveal direction="left" delay={0.6} duration={1.2}>
-                <img src="/images/white-truck.png" alt="Clean White Truck" className="quote-truck-img" />
-              </ScrollReveal>
+              <DrivingTruck />
             </div>
 
             {/* Right Form */}
