@@ -54,25 +54,24 @@ export default function AnimatedTitle({ text, className = '', delay = 0, accentW
         const words = line.split(' ');
         return (
           <React.Fragment key={lineIndex}>
-            <span style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
-              {words.map((word, wordIndex) => {
-                const isAccent = accentWords.some(w => word.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === w.toLowerCase());
-                return (
+            {words.map((word, wordIndex) => {
+              const isAccent = accentWords.some(w => word.replace(/[^a-zA-Z0-9]/g, '').toLowerCase() === w.toLowerCase());
+              return (
+                <React.Fragment key={wordIndex}>
                   <motion.span
-                    key={wordIndex}
                     variants={child}
                     className={isAccent ? accentClass : ''}
                     style={{ 
-                      display: 'inline-block', 
-                      marginRight: wordIndex !== words.length - 1 ? '0.25em' : '0',
+                      display: 'inline-block',
                       color: isAccent && accentColor ? accentColor : undefined
                     }}
                   >
                     {word}
                   </motion.span>
-                );
-              })}
-            </span>
+                  {wordIndex !== words.length - 1 && ' '}
+                </React.Fragment>
+              );
+            })}
             {lineIndex !== lines.length - 1 && <br />}
           </React.Fragment>
         );
