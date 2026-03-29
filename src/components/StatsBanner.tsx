@@ -20,16 +20,7 @@ export default function StatsBanner() {
 
           <div className="stat-item">
             <div className="stat-number">
-              5K<span className="plus-sign">+</span>
-            </div>
-            <div className="stat-label">HIRED<br/>DRIVERS</div>
-          </div>
-
-          <div className="stat-divider"></div>
-
-          <div className="stat-item">
-            <div className="stat-number">
-              63<CheckCircle2 className="stat-icon" size={24} />
+              30+<CheckCircle2 className="stat-icon" size={24} />
             </div>
             <div className="stat-label">CLIENT<br/>COMPANIES</div>
           </div>
