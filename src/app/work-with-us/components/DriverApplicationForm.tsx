@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import AnimatedTitle from '@/components/animations/AnimatedTitle';
