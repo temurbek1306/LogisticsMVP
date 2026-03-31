@@ -5,9 +5,9 @@ import ExclusiveOpportunitiesSection from './components/ExclusiveOpportunitiesSe
 import RecruiterBenefitsSection from './components/RecruiterBenefitsSection';
 import FlexibleHometimeSection from './components/FlexibleHometimeSection';
 import VettingSection from './components/VettingSection';
-import TransparencySection from './components/TransparencySection';
 import DriverReviewsSection from './components/DriverReviewsSection';
 import AmenitiesAndSafetySection from './components/AmenitiesAndSafetySection';
+import DriverEarningsCalculator from './components/DriverEarningsCalculator';
 import DriverApplicationForm from './components/DriverApplicationForm';
 import './WorkWithUs.css';
 
@@ -26,7 +26,7 @@ export default function WorkWithUsPage() {
       <RecruiterBenefitsSection />
       <FlexibleHometimeSection />
       <VettingSection />
-      <TransparencySection />
+      <DriverEarningsCalculator />
       <DriverReviewsSection />
       <AmenitiesAndSafetySection />
       <DriverApplicationForm />

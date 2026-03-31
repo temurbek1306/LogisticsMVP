@@ -13,24 +13,26 @@ export default function StatsBanner() {
             <div className="stat-number">
               5<CheckCircle2 className="stat-icon" size={24} />
             </div>
-            <div className="stat-label">YEARS OF<br/>EXPERIENCE IN<br/>RECRUITING</div>
+            <div className="stat-label">YEARS OF<br />EXPERIENCE IN<br />RECRUITING</div>
           </div>
-          
+
           <div className="stat-divider"></div>
 
           <div className="stat-item">
             <div className="stat-number">
               30+<CheckCircle2 className="stat-icon" size={24} />
             </div>
-            <div className="stat-label">CLIENT<br/>COMPANIES</div>
+            <div className="stat-label">CLIENT<br />COMPANIES</div>
           </div>
 
-          {/* Decorative road element */}
+          {/* Decorative element removed */}
           <div className="road-graphic">
-             <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M0 120C50 120 100 80 150 40S200 0 200 0" stroke="#4B68C3" strokeWidth="40" strokeDasharray="10 10" />
-             </svg>
-             <img src="/images/white-truck.png" alt="Truck" className="floating-truck" />
+            <img
+              src="/images/modern-white-truck.png?v=6"
+              alt="Truck"
+              className="floating-truck"
+              style={{ mixBlendMode: 'multiply', filter: 'brightness(1)' }}
+            />
           </div>
         </div>
       </ScrollReveal>

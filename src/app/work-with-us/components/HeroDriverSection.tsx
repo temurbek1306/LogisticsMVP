@@ -24,7 +24,7 @@ export default function HeroDriverSection() {
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.3}>
-            <button className="btn-primary flex-center gap-2 mt-6">
+            <button className="btn-primary flex items-center justify-center gap-2 mt-8">
               Learn More 
               <span className="btn-circle-icon"><ArrowRight size={18} /></span>
             </button>
@@ -35,32 +35,11 @@ export default function HeroDriverSection() {
         <div className="wwu-hero-visual">
           <ScrollReveal direction="left" delay={0.1}>
             <div className="driver-img-wrapper">
-              {/* Temporarily using placeholder for custom asset */}
               <img 
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=1000" 
+                src="/images/work-with-us/driver1.png" 
                 alt="Professional Truck Driver" 
                 className="driver-main-img" 
               />
-              
-              {/* Floating Experience Card */}
-              <div className="driver-floating-card glass-morphism shadow-2xl">
-                <div className="card-header border-b border-gray-100 pb-4 mb-4">
-                  <div className="driver-avatar-bg">
-                    <UserCircle2 size={32} color="var(--primary-blue)" />
-                  </div>
-                  <div>
-                    <h4 className="driver-name">Ethan Smith</h4>
-                    <p className="text-[10px] uppercase tracking-wider text-gray-400 font-bold">Verified Driver</p>
-                  </div>
-                </div>
-                <div className="card-body">
-                  <div className="xp-row flex justify-between items-center bg-blue-50/50 p-2 rounded-lg">
-                    <span className="xp-label">Experience:</span>
-                    <span className="xp-val">10 years</span>
-                  </div>
-                  <p className="card-note mt-4 text-sm font-medium">Successfully placed at <span className="text-blue font-bold">Interstate Express</span></p>
-                </div>
-              </div>
             </div>
           </ScrollReveal>
         </div>

@@ -4,9 +4,9 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 
 export default function TransparencySection() {
   const paymentData = [
-    { route: 'TX-MO', miles: '527.00', amount: '$1,430.00' },
-    { route: 'MO-PA', miles: '1,009.00', amount: '$2,760.00' },
-    { route: 'MD-IL', miles: '733.00', amount: '$1,400.00' },
+    { route: 'CH-TX', miles: '1,420.00', amount: '$923.00' }, // 0.65 cpm
+    { route: 'TX-FL', miles: '1,180.00', amount: '$767.00' },
+    { route: 'FL-GA', miles: '1,400.00', amount: '$910.00' },
   ];
 
   return (
@@ -35,8 +35,8 @@ export default function TransparencySection() {
                   </div>
                 ))}
                 <div className="table-footer">
-                  <span>Week's paycheck:</span>
-                  <span className="text-blue font-bold">$5,590.00</span>
+                  <span>Weekly Potential (4000 miles @ 0.65 CPM):</span>
+                  <span className="text-blue font-bold">$2,600.00</span>
                 </div>
               </div>
             </div>
@@ -44,26 +44,12 @@ export default function TransparencySection() {
 
           {/* Proven Track Record Card */}
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="transparency-card">
-              <h3 className="title-medium text-dark mb-4 uppercase">Proven Track Record</h3>
-              <p className="text-dark opacity-70 mb-6 text-sm">
-                We've successfully helped over 727 drivers secure employment. Don't just take our word for it; explore the <span className="text-blue font-bold cursor-pointer">reviews</span> from satisfied drivers.
-              </p>
-              
-              <div className="stats-badges">
-                <div className="stat-badge">
-                  <div className="stars">★★★★★</div>
-                  <span className="stat-label">Great!</span>
-                </div>
-                <div className="stat-badge alt">
-                  <div className="stars">★★★★★</div>
-                  <span className="stat-label">found a job quickly</span>
-                </div>
-                <div className="stat-badge">
-                  <div className="stars">★★★★★</div>
-                  <span className="stat-label">convenient schedule</span>
-                </div>
-              </div>
+            <div className="driver-img-wrapper">
+              <img 
+                src="/images/work-with-us/driver1.png" 
+                alt="Professional Truck Driver" 
+                className="driver-main-img" 
+              />
             </div>
           </ScrollReveal>
         </div>

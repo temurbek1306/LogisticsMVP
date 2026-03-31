@@ -1,40 +1,76 @@
 import React from 'react';
 
-export default function Logo() {
+interface LogoProps {
+  variant?: 'light' | 'dark' | 'default';
+}
+
+export default function Logo({ variant = 'default' }: LogoProps) {
+  // Use CSS variables for colors to allow easy switching
+  const primaryColor = variant === 'light' ? '#ffffff' : '#1c325c';
+  const subtitleColor = variant === 'light' ? '#ffffff' : '#ba3e29'; // Pure white for better contrast
+  const dividerColor = variant === 'light' ? 'rgba(255,255,255,0.4)' : '#1c325c';
+
   return (
-    <div className="logo-container">
-      {/* SVG Geometric logo approximation */}
-      <svg className="logo-svg" width="48" height="48" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round">
-        {/* Outer hexagon */}
-        <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" />
-        {/* Inner lines forming the 3D-like structure */}
-        <line x1="50" y1="5" x2="30" y2="45" />
-        <line x1="50" y1="5" x2="70" y2="45" />
-        <line x1="5" y1="25" x2="30" y2="45" />
-        <line x1="5" y1="25" x2="35" y2="65" />
-        <line x1="5" y1="75" x2="35" y2="65" />
-        <line x1="5" y1="75" x2="50" y2="95" />
-        <line x1="95" y1="25" x2="70" y2="45" />
-        <line x1="95" y1="25" x2="65" y2="65" />
-        <line x1="95" y1="75" x2="65" y2="65" />
-        <line x1="95" y1="75" x2="50" y2="95" />
-        <line x1="30" y1="45" x2="70" y2="45" />
-        <line x1="30" y1="45" x2="35" y2="65" />
-        <line x1="70" y1="45" x2="65" y2="65" />
-        <line x1="35" y1="65" x2="50" y2="95" />
-        <line x1="65" y1="65" x2="50" y2="95" />
-        <line x1="35" y1="65" x2="65" y2="65" />
+    <div 
+      className={`logo-container ${variant === 'light' ? 'on-dark' : 'on-light'}`} 
+      style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '4px' }}
+    >
+      <svg 
+        width="58" 
+        height="58" 
+        viewBox="0 0 100 100" 
+        fill="none" 
+        stroke={primaryColor} 
+        strokeWidth="4.5" 
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        style={{ transition: 'stroke 0.4s ease' }}
+      >
+        <polygon points="27,10 73,10 96,50 73,90 27,90 4,50" />
+        <polygon points="42,29 81,50 42,71" />
+        <line x1="4" y1="50" x2="42" y2="29" />
+        <line x1="4" y1="50" x2="42" y2="71" />
+        <line x1="27" y1="10" x2="42" y2="29" />
+        <line x1="27" y1="90" x2="42" y2="71" />
+        <line x1="73" y1="10" x2="42" y2="29" />
+        <line x1="73" y1="10" x2="81" y2="50" />
+        <line x1="73" y1="90" x2="42" y2="71" />
+        <line x1="73" y1="90" x2="81" y2="50" />
+        <line x1="96" y1="50" x2="81" y2="50" />
       </svg>
       
-      {/* Vertical divider */}
-      <div className="logo-divider"></div>
+      <div style={{ 
+        width: '2px', 
+        height: '46px', 
+        backgroundColor: dividerColor,
+        borderRadius: '2px',
+        transition: 'background-color 0.4s ease'
+      }}></div>
       
-      {/* Text Group */}
-      <div className="logo-text-group">
-        <span className="logo-title">
-          FUTURE<br/>SOLUTION
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <span style={{ 
+          color: primaryColor, 
+          fontWeight: 900, 
+          fontSize: '26px', 
+          lineHeight: '0.9',
+          letterSpacing: '-0.2px',
+          fontFamily: 'Montserrat, system-ui, sans-serif',
+          transition: 'color 0.4s ease'
+        }}>
+          FUTURE<br/>
+          SOLUTION
         </span>
-        <span className="logo-subtitle">
+        <span style={{ 
+          color: subtitleColor, 
+          fontWeight: 700, 
+          fontSize: '10px', 
+          lineHeight: '1',
+          marginTop: '4px',
+          fontFamily: 'Montserrat, system-ui, sans-serif',
+          textTransform: 'uppercase',
+          letterSpacing: '1px',
+          transition: 'color 0.4s ease'
+        }}>
           we work you decide
         </span>
       </div>

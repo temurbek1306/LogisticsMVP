@@ -29,13 +29,28 @@ export default function VettingSection() {
 
         <div className="vetting-visual">
           <ScrollReveal direction="left" delay={0.3}>
-            <div className="hometime-img-wrapper">
-              <img 
-                src="https://images.unsplash.com/photo-1591768793355-74d7c8691f1a?auto=format&fit=crop&q=80&w=1000" 
-                alt="Truck inside magnifying glass" 
-                className="hometime-img" 
-              />
-              <div className="rejected-stamp">REJECTED</div>
+            <div className="vetting-card-premium">
+              <div className="vetting-image-container">
+                <img 
+                  src="/images/work-with-us/vetting.png" 
+                  alt="Security Clearance Dashboard" 
+                  className="vetting-img" 
+                />
+                <div className="vetting-status-badge">
+                  <div className="pulse-dot"></div>
+                  SYSTEMS ACTIVE: VETTING VERIFIED
+                </div>
+              </div>
+              <div className="vetting-stats-overlay">
+                <div className="stat-box">
+                  <span className="stat-val">27%</span>
+                  <span className="stat-label">REJECTION RATE</span>
+                </div>
+                <div className="stat-box">
+                  <span className="stat-val">100%</span>
+                  <span className="stat-label">SAFETY FOCUS</span>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>

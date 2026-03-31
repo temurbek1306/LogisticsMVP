@@ -10,22 +10,22 @@ const guarantees = [
   {
     icon: ShieldCheck,
     number: '01',
-    title: 'Client-Ready Candidates',
-    desc: 'We deliver pre-qualified candidates who meet all FMCSA standards, allowing your safety department to perform the final screening and background checks with confidence.',
+    title: 'DEDICATED RECRUITER FOR EVERY DRIVER',
+    desc: 'Every driver is assigned a dedicated recruiter who manages the full hiring process from sourcing to onboarding. Our team also maintains communication with the driver for 2 weeks after placement to ensure stability and successful integration into your company.',
     accent: '#3A56AF',
   },
   {
     icon: CreditCard,
     number: '02',
-    title: 'Pay Only After Results',
+    title: 'PAY ONLY AFTER RESULTS',
     desc: "You won't be required to make any payments until the driver starts delivering loads. This ensures that you're only paying for services that have already been rendered.",
     accent: '#2563EB',
   },
   {
     icon: RefreshCw,
     number: '03',
-    title: 'Replacement Guarantee',
-    desc: "If a driver we provide doesn't meet your expectations or leaves within the first 30 days, we'll find a qualified replacement at no extra cost to you.",
+    title: '2-WEEK PLACEMENT GUARANTEE',
+    desc: "We stand behind the quality of our placements. If a driver leaves within the first 2 weeks after starting, we will provide a replacement at no additional cost (for completed placements with confirmed payment).",
     accent: '#1D4ED8',
   },
 ];

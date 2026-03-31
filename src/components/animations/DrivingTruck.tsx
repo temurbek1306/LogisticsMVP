@@ -33,7 +33,12 @@ export default function DrivingTruck() {
         >
           {/* Main Truck Image */}
           <div className="truck-body-wrapper">
-             <img src="/images/white-truck.png" alt="Driving Truck" className="quote-truck-img" />
+             <img 
+               src="/images/modern-white-truck.png" 
+               alt="Driving Truck" 
+               className="quote-truck-img" 
+               style={{ mixBlendMode: 'multiply', filter: 'brightness(1)' }}
+             />
           </div>
 
           {/* Ground Shadow */}

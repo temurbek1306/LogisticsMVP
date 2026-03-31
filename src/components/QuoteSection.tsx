@@ -71,7 +71,7 @@ export default function QuoteSection() {
                 </div>
                 <div className="input-group">
                   <label>Email *</label>
-                  <input required type="email" placeholder="example@google.com" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} />
+                  <input required type="email" placeholder="futurelogistic2025@gmail.com" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} />
                 </div>
                 <div className="input-group">
                   <label>City and state *</label>

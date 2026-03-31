@@ -10,7 +10,7 @@
   z-index: 1000;
   transition: all 0.4s ease;
   padding: 20px 0;
-  background: transparent;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
 }
 
 .header.scrolled {
@@ -31,6 +31,7 @@
 .logo {
   text-decoration: none;
   z-index: 2;
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.5));
 }
 
 /* Nav links */
@@ -38,11 +39,13 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 40px;
   padding: 6px 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .header.scrolled .nav-links {
@@ -52,8 +55,9 @@
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
   font-size: 14px;
   padding: 8px 16px;
   border-radius: 30px;

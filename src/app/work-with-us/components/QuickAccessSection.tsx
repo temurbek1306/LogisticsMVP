@@ -15,11 +15,11 @@ export default function QuickAccessSection() {
               text="QUICK ACCESS TO<br/>JOB OPPORTUNITIES"
               className="title-large"
               accentWords={['OPPORTUNITIES']}
-              accentColor="var(--text-dark)"
+              accentColor="var(--primary-blue)"
             />
             <ScrollReveal direction="up" delay={0.2}>
-              <p className="qa-desc mt-4">
-                Future Solution Logistic offers immediate access to the latest job opportunities.
+              <p className="qa-desc mt-8">
+                Future Solution Logistic offers immediate access to the latest job opportunities in the market.
               </p>
             </ScrollReveal>
           </div>
@@ -27,11 +27,11 @@ export default function QuickAccessSection() {
           {/* Right Side */}
           <div className="qa-card-content">
             <ScrollReveal direction="left" delay={0.3}>
-              <div className="qa-info-card glass-morphism">
-                <div className="qa-icon-wrapper">
-                  <Contact2 size={32} color="#fff" />
+              <div className="qa-info-card-premium">
+                <div className="qa-icon-wrapper-premium">
+                  <Contact2 size={36} color="#fff" />
                 </div>
-                <p className="qa-card-text">
+                <p className="qa-card-text-premium">
                   Our drivers not only secure employment 30% faster compared to independent searches but also enjoy unique benefits like a dedicated recruiter and 24-hour pre-approval.
                 </p>
               </div>
@@ -39,21 +39,21 @@ export default function QuickAccessSection() {
           </div>
         </div>
 
-      </div>
-        
-      {/* Full Width Truck Array */}
-      <ScrollReveal direction="up" delay={0.4} width="100%">
-        <div className="container mt-12">
-          <div className="qa-truck-array">
+        {/* Fleet Image */}
+        <ScrollReveal direction="up" delay={0.4} width="100%">
+          <div className="qa-fleet-img-wrapper">
             <img 
-              src="https://images.unsplash.com/photo-1542362567-b0550029315e?auto=format&fit=crop&q=80&w=1400" 
-              alt="Fleet of modern semi-trucks parked in a row" 
-              className="qa-trucks-img"
+              src="https://images.pexels.com/photos/1427541/pexels-photo-1427541.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+              alt="Fleet of modern semi-trucks" 
+              className="qa-fleet-img"
             />
+            <div className="qa-fleet-overlay">
+              <h3 className="qa-fleet-title">Premium Fleet Partnerships</h3>
+            </div>
           </div>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
 
+      </div>
     </section>
   );
 }
