@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 
 export default function ExclusiveOpportunitiesSection() {
   return (
-    <section className="wwu-exclusive-section">
+    <section id="success-rate" className="wwu-exclusive-section">
       <div className="container">
         
         {/* Header */}

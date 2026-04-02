@@ -32,6 +32,29 @@ export default function Header() {
     return () => { document.body.style.overflow = 'unset'; }
   }, [isMobileMenuOpen]);
 
+  const navLinks = isHome 
+    ? [
+        { label: 'Services', href: '#services' },
+        { label: 'Why Us', href: '#why-us' },
+        { label: 'Savings', href: '#savings' },
+        { label: 'Reviews', href: '#reviews' },
+      ]
+    : [
+        { label: 'Benefits', href: '#benefits' },
+        { label: 'Job Types', href: '#job-types' },
+        { label: 'Calculator', href: '#calculator' },
+        { label: 'Reviews', href: '#reviews' },
+      ];
+
+  const getLinkHref = (href: string) => {
+    if (href.startsWith('#')) {
+      if (isHome && pathname === '/') return href;
+      if (!isHome && pathname === '/work-with-us') return href;
+      return `${isHome ? '/work-with-us' : '/'}${href}`;
+    }
+    return href;
+  };
+
   return (
     <header className={`header ${scrolled || !isHome ? 'scrolled glass-morphism' : ''}`}>
       <div className="container header-container">
@@ -39,10 +62,11 @@ export default function Header() {
           <Logo />
         </Link>
         <nav className="nav-links">
-          <Link href="#services">Services</Link>
-          <Link href="#why-us">Why Us</Link>
-          <Link href="#calculator">Calculator</Link>
-          <Link href="#reviews">Reviews</Link>
+          {navLinks.map((link) => (
+            <Link key={link.label} href={isHome ? link.href : (pathname === '/work-with-us' ? link.href : `/${link.href}`)}>
+              {link.label}
+            </Link>
+          ))}
           <div className="nav-dropdown">
             <span className="nav-dropdown-trigger">
               Drivers <ChevronDown size={16} className="dropdown-chevron" />
@@ -58,7 +82,9 @@ export default function Header() {
           </div>
         </nav>
         <div className="header-actions">
-          <a href="#quote" className="btn-primary desktop-btn">Get Drivers</a>
+          <a href={isHome ? "#quote" : "/#quote"} className="btn-primary desktop-btn">
+            {isHome ? 'Get Drivers' : 'Apply Now'}
+          </a>
           
           <button 
             className="mobile-menu-btn" 
@@ -99,16 +125,21 @@ export default function Header() {
               </div>
               
               <nav className="sidebar-nav">
-                <Link href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-                <Link href="#why-us" onClick={() => setIsMobileMenuOpen(false)}>Why Us</Link>
-                <Link href="#calculator" onClick={() => setIsMobileMenuOpen(false)}>Calculator</Link>
-                <Link href="#reviews" onClick={() => setIsMobileMenuOpen(false)}>Reviews</Link>
+                {navLinks.map((link) => (
+                  <Link 
+                    key={link.label} 
+                    href={isHome ? link.href : (pathname === '/work-with-us' ? link.href : `/${link.href}`)} 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
                 <div className="sidebar-dropdown">
                   <div 
                     className="sidebar-dropdown-trigger" 
                     onClick={() => setDriversDropdownOpen(!driversDropdownOpen)}
                   >
-                    <span>Drivers</span>
+                    <span>Drivers Pages</span>
                     <ChevronDown size={20} style={{ transform: driversDropdownOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s ease' }} />
                   </div>
                   <AnimatePresence>
@@ -133,8 +164,8 @@ export default function Header() {
               </nav>
 
               <div className="sidebar-footer">
-                <a href="#quote" className="btn-primary w-full" onClick={() => setIsMobileMenuOpen(false)}>
-                  Get Drivers Now
+                <a href={isHome ? "#quote" : "/work-with-us/#apply"} className="btn-primary w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                  {isHome ? 'Get Drivers Now' : 'Apply to Drive'}
                 </a>
               </div>
             </motion.div>

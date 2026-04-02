@@ -40,7 +40,7 @@ const vettingSteps = [
 
 export default function VettingProcessSection() {
   return (
-    <section className="vetting-section">
+    <section id="vetting" className="section vetting-section">
       <div className="container">
         
         <div className="vetting-header">

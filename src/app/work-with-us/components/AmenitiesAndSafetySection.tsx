@@ -52,7 +52,8 @@ export default function AmenitiesAndSafetySection() {
                       <p className="text-[11px] uppercase tracking-widest text-gray-400 font-bold mt-1">USDOT 3123849</p>
                     </div>
                   </div>
-                  <span className="status-failed report-status">Rejected</span>
+                   {/* Removed Rejected status */}
+
                </div>
                
                <div className="space-y-4">

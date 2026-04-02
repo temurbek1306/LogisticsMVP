@@ -37,7 +37,7 @@ export default function DriverApplicationForm() {
   };
 
   return (
-    <section className="wwu-form-section">
+    <section id="apply" className="wwu-form-section">
       <div className="container">
         <div className="form-wrapper-premium">
           

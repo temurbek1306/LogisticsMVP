@@ -6,7 +6,7 @@ import AnimatedTitle from './animations/AnimatedTitle';
 
 export default function SavingsSection() {
   return (
-    <section className="section savings-section">
+    <section id="savings" className="section savings-section">
       <div className="container">
         
         {/* Top 2 columns */}

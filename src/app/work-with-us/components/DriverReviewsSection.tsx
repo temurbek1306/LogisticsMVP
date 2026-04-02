@@ -35,7 +35,7 @@ export default function DriverReviewsSection() {
   };
 
   return (
-    <section className="wwu-reviews-section bg-primary-blue py-24">
+    <section id="reviews" className="wwu-reviews-section bg-primary-blue py-24">
       <div className="container">
         <div className="reviews-header text-white mb-16">
           <AnimatedTitle 

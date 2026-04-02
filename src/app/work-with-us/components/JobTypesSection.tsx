@@ -13,7 +13,7 @@ export default function JobTypesSection() {
   ];
 
   return (
-    <section className="wwu-jobs-section py-24 bg-primary-blue">
+    <section id="job-types" className="wwu-jobs-section py-24 bg-primary-blue">
       <div className="container">
         
         {/* Top Header */}

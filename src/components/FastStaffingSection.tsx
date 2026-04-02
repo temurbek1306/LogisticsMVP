@@ -6,7 +6,7 @@ import AnimatedTitle from './animations/AnimatedTitle';
 
 export default function FastStaffingSection() {
   return (
-    <section className="section fast-staffing-section">
+    <section id="why-us" className="section fast-staffing-section">
       <div className="container">
         
         <ScrollReveal direction="left" delay={0.1}>

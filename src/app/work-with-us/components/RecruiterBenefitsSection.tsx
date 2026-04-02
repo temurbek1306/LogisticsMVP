@@ -23,7 +23,7 @@ export default function RecruiterBenefitsSection() {
   ];
 
   return (
-    <section className="wwu-benefits-section">
+    <section id="benefits" className="wwu-benefits-section">
       <div className="container">
         
         <div className="benefits-title-wrap">

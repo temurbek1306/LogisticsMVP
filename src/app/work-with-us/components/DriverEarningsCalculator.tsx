@@ -17,7 +17,7 @@ export default function DriverEarningsCalculator() {
   }, [miles, cpm]);
 
   return (
-    <section className="wwu-calc-premium-section" id="driver-calculator">
+    <section className="wwu-calc-premium-section" id="calculator">
       <div className="container">
         <div className="calc-modern-grid">
           {/* Left Column: Result Dashboard */}
