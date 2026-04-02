@@ -82,7 +82,7 @@ export default function Header() {
           </div>
         </nav>
         <div className="header-actions">
-          <a href={isHome ? "#quote" : "/#quote"} className="btn-primary desktop-btn">
+          <a href={isHome ? "#quote" : "#apply"} className="btn-primary desktop-btn">
             {isHome ? 'Get Drivers' : 'Apply Now'}
           </a>
           
