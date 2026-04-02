@@ -19,15 +19,37 @@ export default function DriverApplicationForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Mimic API delay
-    setTimeout(() => {
-        setSubmitted(false);
-        alert('Application submitted successfully!');
-    }, 2000);
+    setStatus('loading');
+
+    const webhookUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK;
+
+    try {
+      await fetch(webhookUrl!, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+        mode: 'no-cors', // Google Apps Script requires this
+      });
+      setStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        cityState: '',
+        phone: '',
+        trailerPreference: 'Dry Van',
+        milesPerWeek: '2500',
+        yearsExperience: '2',
+        cleanRecord: 'YES',
+        sapProgram: 'NO',
+        privacyPolicy: false
+      });
+    } catch (err) {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -178,12 +200,24 @@ export default function DriverApplicationForm() {
 
                 <button 
                     type="submit" 
-                    className={`btn-submit-premium ${submitted ? 'loading' : ''}`}
-                    disabled={submitted}
+                    className={`btn-submit-premium ${status === 'loading' ? 'loading' : ''}`}
+                    disabled={status === 'loading'}
                 >
-                  {submitted ? 'PROCESSING...' : <>SUBMIT APPLICATION</>}
+                  {status === 'loading' ? 'SENDING...' : 'SUBMIT APPLICATION'}
                 </button>
               </div>
+
+              {status === 'success' && (
+                <div style={{ marginTop: '20px', padding: '16px 24px', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.3)', borderRadius: '12px', color: '#10B981', fontWeight: 700, textAlign: 'center' }}>
+                  ✅ Application submitted successfully! We'll contact you within 24 hours.
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div style={{ marginTop: '20px', padding: '16px 24px', background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: '12px', color: '#EF4444', fontWeight: 700, textAlign: 'center' }}>
+                  ❌ Something went wrong. Please try again or call us directly.
+                </div>
+              )}
             </form>
           </div>
         </div>
