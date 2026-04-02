@@ -75,7 +75,7 @@ export default function Header() {
               <Link href="/work-with-us" className="dropdown-item">
                 <Briefcase size={18} className="item-icon" /> Work with us
               </Link>
-              <Link href="/apply-to-drive" className="dropdown-item">
+              <Link href="/work-with-us#apply" className="dropdown-item">
                 <UserSearch size={18} className="item-icon" /> Apply to drive
               </Link>
             </div>
@@ -154,7 +154,7 @@ export default function Header() {
                         <Link href="/work-with-us" className="sidebar-dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>
                           <div className="sidebar-item-icon"><Briefcase size={18} /></div> Work with us
                         </Link>
-                        <Link href="/apply-to-drive" className="sidebar-dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Link href="/work-with-us#apply" className="sidebar-dropdown-item" onClick={() => setIsMobileMenuOpen(false)}>
                           <div className="sidebar-item-icon"><UserSearch size={18} /></div> Apply to drive
                         </Link>
                       </motion.div>
