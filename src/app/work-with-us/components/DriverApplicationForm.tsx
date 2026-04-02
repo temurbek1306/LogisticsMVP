@@ -32,7 +32,8 @@ export default function DriverApplicationForm() {
     e.preventDefault();
     setStatus('loading');
 
-    const webhookUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK;
+    // Hardcoded URL so it works automatically on Vercel/production without .env setup
+    const webhookUrl = "https://script.google.com/macros/s/AKfycbzPWQpAqvhHj3gly48P_rS0e3ZWjcrDRH7YrAArI43fh4J3zpo7yRdPneTK1ppujZ6oHw/exec";
 
     try {
       await fetch(webhookUrl!, {
