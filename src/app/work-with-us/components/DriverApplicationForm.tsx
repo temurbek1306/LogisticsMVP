@@ -33,7 +33,7 @@ export default function DriverApplicationForm() {
     setStatus('loading');
 
     // Hardcoded URL so it works automatically on Vercel/production without .env setup
-    const webhookUrl = "https://script.google.com/macros/s/AKfycbzPWQpAqvhHj3gly48P_rS0e3ZWjcrDRH7YrAArI43fh4J3zpo7yRdPneTK1ppujZ6oHw/exec";
+    const webhookUrl = "https://script.google.com/macros/s/AKfycbw06vD8ZiRsxxxre7J78wYkSUo55YYsZW760S0k7N5IblBkvvhh587pwfrsA0Qdvmna/exec";
 
     try {
       await fetch(webhookUrl!, {
