@@ -394,6 +394,7 @@ input:focus + label, textarea:focus + label {
 }
 
 @media (max-width: 768px) {
+  .footer { padding-top: 40px; }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
@@ -643,4 +644,22 @@ input:focus + label, textarea:focus + label {
 @media (min-width: 1024px) {
   .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  /* Scale down extra large paddings on mobile */
+  .py-24 { padding-top: 56px; padding-bottom: 56px; }
+  .py-32 { padding-top: 64px; padding-bottom: 64px; }
+  .p-10 { padding: 24px; }
+  .p-12 { padding: 28px; }
+  .pb-10 { padding-bottom: 24px; }
+  .mb-20 { margin-bottom: 40px; }
+  .gap-20, .gap-12 { gap: 32px; }
+  
+  /* Scale down huge fonts on mobile */
+  .title-main { font-size: 2.2rem; }
+  .text-4xl { font-size: 1.8rem; line-height: 1.2; }
+  
+  /* Flex defaults for mobile usually stack */
+  .md\:stack-mobile { flex-direction: column !important; }
 }
