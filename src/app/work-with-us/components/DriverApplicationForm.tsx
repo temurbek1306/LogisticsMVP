@@ -21,6 +21,13 @@ export default function DriverApplicationForm() {
   const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    const val = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
+    setFormData(prev => ({ ...prev, [name]: val }));
+    if (status !== 'idle') setStatus('idle'); // clear previous status to allow resubmission
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
@@ -30,10 +37,10 @@ export default function DriverApplicationForm() {
     try {
       await fetch(webhookUrl!, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(formData),
-        mode: 'no-cors', // Google Apps Script requires this
       });
+      
       setStatus('success');
       setFormData({
         firstName: '',
@@ -48,14 +55,9 @@ export default function DriverApplicationForm() {
         privacyPolicy: false
       });
     } catch (err) {
+      console.error(err);
       setStatus('error');
     }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target;
-    const val = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value;
-    setFormData(prev => ({ ...prev, [name]: val }));
   };
 
   return (
