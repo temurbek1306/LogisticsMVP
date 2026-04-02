@@ -47,7 +47,7 @@ export default function JobTypesSection() {
         <div className="trailers-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {trailers.map((trailer, idx) => (
             <ScrollReveal key={idx} direction="up" delay={0.1 * (idx + 1)} width="100%">
-              <div className="trailer-card-premium group relative overflow-hidden rounded-[32px] aspect-[4/5] bg-white/5">
+              <div className="trailer-card-premium group">
                 <img 
                     src={trailer.img} 
                     alt={trailer.name} 
