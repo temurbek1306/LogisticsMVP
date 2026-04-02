@@ -106,26 +106,26 @@ export default function DriverApplicationForm() {
               <div className="form-section-title">Personal Information</div>
               <div className="form-grid mb-6">
                 <div className="form-group">
-                  <label className="form-label" htmlFor="firstName">First name</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="John" className="form-input-premium" required onChange={handleChange} />
+                  <label className="form-label" htmlFor="firstName">First name <span style={{color: '#EF4444'}}>*</span></label>
+                  <input type="text" id="firstName" name="firstName" placeholder="e.g. John" className="form-input-premium" required onChange={handleChange} value={formData.firstName} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label" htmlFor="lastName">Last name</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Doe" className="form-input-premium" required onChange={handleChange} />
+                  <label className="form-label" htmlFor="lastName">Last name <span style={{color: '#EF4444'}}>*</span></label>
+                  <input type="text" id="lastName" name="lastName" placeholder="e.g. Doe" className="form-input-premium" required onChange={handleChange} value={formData.lastName} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label" htmlFor="cityState">City and state</label>
-                  <input type="text" id="cityState" name="cityState" placeholder="Chicago, IL" className="form-input-premium" required onChange={handleChange} />
+                  <label className="form-label" htmlFor="cityState">City and state <span style={{color: '#EF4444'}}>*</span></label>
+                  <input type="text" id="cityState" name="cityState" placeholder="e.g. Chicago, IL" className="form-input-premium" required onChange={handleChange} value={formData.cityState} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label" htmlFor="phone">Phone number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" className="form-input-premium" required onChange={handleChange} />
+                  <label className="form-label" htmlFor="phone">Phone number <span style={{color: '#EF4444'}}>*</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="e.g. (555) 000-0000" className="form-input-premium" required onChange={handleChange} value={formData.phone} />
                 </div>
               </div>
 
               <div className="form-section-title">Professional Preferences</div>
               <div className="form-group mb-6">
-                <label className="form-label">Trailer preference</label>
+                <label className="form-label">Trailer preference <span style={{color: '#EF4444'}}>*</span></label>
                 <div className="form-radio-grid">
                   {['Dry Van', 'Flatbed', 'Reefer'].map((type) => (
                     <label 
@@ -150,19 +150,19 @@ export default function DriverApplicationForm() {
 
               <div className="form-grid mb-6">
                 <div className="form-group">
-                  <label className="form-label" htmlFor="milesPerWeek">Weekly miles goal</label>
-                  <input type="number" id="milesPerWeek" name="milesPerWeek" placeholder="2500" className="form-input-premium" required onChange={handleChange} />
+                  <label className="form-label" htmlFor="milesPerWeek">Weekly miles goal <span style={{color: '#EF4444'}}>*</span></label>
+                  <input type="number" id="milesPerWeek" name="milesPerWeek" placeholder="e.g. 2500" className="form-input-premium" required onChange={handleChange} value={formData.milesPerWeek} />
                 </div>
                 <div className="form-group">
-                  <label className="form-label" htmlFor="yearsExperience">Experience (Years)</label>
-                  <input type="number" id="yearsExperience" name="yearsExperience" placeholder="2" className="form-input-premium" required onChange={handleChange} />
+                  <label className="form-label" htmlFor="yearsExperience">Experience (Years) <span style={{color: '#EF4444'}}>*</span></label>
+                  <input type="number" id="yearsExperience" name="yearsExperience" placeholder="e.g. 2" className="form-input-premium" required onChange={handleChange} value={formData.yearsExperience} />
                 </div>
               </div>
 
               <div className="form-section-title">Compliance & History</div>
               <div className="form-grid mb-8">
                  <div className="form-group">
-                    <label className="form-label">Clean driving record?</label>
+                    <label className="form-label">Clean driving record? <span style={{color: '#EF4444'}}>*</span></label>
                     <div className="form-boolean-group">
                       {['YES', 'NO'].map((opt) => (
                         <label 
@@ -178,7 +178,7 @@ export default function DriverApplicationForm() {
                     </div>
                  </div>
                  <div className="form-group">
-                    <label className="form-label">SAP program history?</label>
+                    <label className="form-label">SAP program history? <span style={{color: '#EF4444'}}>*</span></label>
                     <div className="form-boolean-group">
                       {['YES', 'NO'].map((opt) => (
                         <label 
@@ -198,13 +198,14 @@ export default function DriverApplicationForm() {
               <div className="form-footer">
                 <label className="flex items-center gap-3 cursor-pointer" htmlFor="privacyPolicy">
                   <input type="checkbox" id="privacyPolicy" name="privacyPolicy" checked={formData.privacyPolicy} onChange={handleChange} required className="w-5 h-5 accent-blue-900" />
-                  <span className="text-xs text-gray-500 font-medium">I agree with the <span className="text-blue-900 underline">privacy policy</span></span>
+                  <span className="text-xs text-gray-500 font-medium">I agree with the <span className="text-blue-900 underline">privacy policy</span> <span style={{color: '#EF4444'}}>*</span></span>
                 </label>
 
                 <button 
                     type="submit" 
                     className={`btn-submit-premium ${status === 'loading' ? 'loading' : ''}`}
-                    disabled={status === 'loading'}
+                    disabled={status === 'loading' || !formData.firstName || !formData.lastName || !formData.cityState || !formData.phone || !formData.milesPerWeek || !formData.yearsExperience || !formData.privacyPolicy}
+                    style={{ opacity: (!formData.firstName || !formData.lastName || !formData.cityState || !formData.phone || !formData.milesPerWeek || !formData.yearsExperience || !formData.privacyPolicy) ? 0.5 : 1, cursor: (!formData.firstName || !formData.lastName || !formData.cityState || !formData.phone || !formData.milesPerWeek || !formData.yearsExperience || !formData.privacyPolicy) ? 'not-allowed' : 'pointer' }}
                 >
                   {status === 'loading' ? 'SENDING...' : 'SUBMIT APPLICATION'}
                 </button>
