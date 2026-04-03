@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  verification: {
+    google: "5QznKsWrTN9I_-q5qbAJ5kNTJlGgyPdhvlN_iZlTzDc",
+  },
   openGraph: {
     title: "Future Solution | Premier Logistics & Driver Recruitment",
     description: "Accelerate your fleet's growth. We specialize in CDL-A driver recruitment and professional truck dispatching services.",
