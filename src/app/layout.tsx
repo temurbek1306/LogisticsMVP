@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://futuresolutions.aifreelancing.uz'),
+  metadataBase: new URL('https://future-solution.org'),
   title: {
     default: "Future Solution | Premier CDL-A Truck Detailing & Logistics",
     template: "%s | Future Solution"
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Future Solution | Premier Logistics & Driver Recruitment",
     description: "Accelerate your fleet's growth. We specialize in CDL-A driver recruitment and professional truck dispatching services.",
-    url: 'https://futuresolutions.aifreelancing.uz',
+    url: 'https://future-solution.org',
     siteName: 'Future Solution',
     locale: 'en_US',
     type: 'website',
@@ -61,8 +61,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Future Solution",
-    "url": "https://futuresolutions.aifreelancing.uz",
-    "logo": "https://futuresolutions.aifreelancing.uz/favicon.ico",
+    "url": "https://future-solution.org",
+    "logo": "https://future-solution.org/favicon.ico",
     "description": "Premier U.S. logistics company specializing in CDL-A driver recruitment and truck dispatching services.",
   };
 

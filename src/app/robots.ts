@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://futuresolutions.aifreelancing.uz/sitemap.xml',
+    sitemap: 'https://future-solution.org/sitemap.xml',
   }
 }
