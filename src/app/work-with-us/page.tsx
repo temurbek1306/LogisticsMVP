@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import HeroDriverSection from './components/HeroDriverSection';
 import QuickAccessSection from './components/QuickAccessSection';
 import JobTypesSection from './components/JobTypesSection';
@@ -11,9 +12,9 @@ import DriverEarningsCalculator from './components/DriverEarningsCalculator';
 import DriverApplicationForm from './components/DriverApplicationForm';
 import './WorkWithUs.css';
 
-export const metadata = {
-  title: 'Work With Us | Future Solution Logistics',
-  description: 'Supercharge your driving career with competitive pay, guaranteed mileage, and 24-hour pre-approval processing.',
+export const metadata: Metadata = {
+  title: 'Work With Us Careers & CDL-A Drivers',
+  description: 'Supercharge your driving career with competitive pay, guaranteed mileage, and 24-hour pre-approval processing with Future Solution Logistics.',
 };
 
 export default function WorkWithUsPage() {

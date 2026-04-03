@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
+
+export const metadata: Metadata = {
+  title: "Premier CDL-A Truck Detailing & Logistics Solutions",
+};
+
 import TrustedBySection from '@/components/TrustedBySection';
 import ServicesSection from '@/components/ServicesSection';
 import StatsBanner from '@/components/StatsBanner';
